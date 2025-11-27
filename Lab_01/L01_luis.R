@@ -4,7 +4,11 @@
 
 library(tidyverse)
 
-aire <- airquality
+aire <-
+  airquality %>%
+  as_tibble() %>%
+  print()
 
 ggplot(aire, aes(Temp, Ozone)) +
-  geom_point()
+  geom_point() +
+  theme_bw()
